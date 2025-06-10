@@ -11,7 +11,20 @@
 #define LG_MT_SK &sk LGUI
 #define LS_MT_SK &sk LSHIFT
 
-/ {
+/
+{
+    macros {
+        demo: demo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = 
+                <&macro_tap &kp COLON &kp J &kp P &kp MINUS &kp D &kp A &kp T &kp A &kp P &kp I &kp COLON>
+                ;
+        };
+    }; 
+};
+{
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -76,14 +89,14 @@
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │  =       │  7       │  8       │  9       │  +       │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ Shift    │  Ctrl    │  Alt     │  Gui     │          │   │  0       │  1       │  2       │  3       │  -       │
+        //│ Shift    │  Ctrl    │  Alt     │  Gui     │   Demo   │   │  0       │  1       │  2       │  3       │  -       │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  *       │  4       │  5       │  6       │  /       │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │          │  *****   │ 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             &trans     &trans      &trans     &trans     &trans         &kp EQUAL  &kp N7  &kp N8     &kp N9     &kp KP_PLUS  
-            LS_MT_SK   LC_MT_SK    LA_MT_SK   LG_MT_SK   &trans         &kp N0     &kp N1  &kp N2     &kp N3     &kp MINUS 
+            LS_MT_SK   LC_MT_SK    LA_MT_SK   LG_MT_SK   &demo         &kp N0     &kp N1  &kp N2     &kp N3     &kp MINUS 
             &trans     &trans      &trans     &trans     &trans         &kp ASTRK  &kp N4  &kp N5     &kp N6     &kp KP_DIVIDE 
                                               &trans     &trans         &trans     &trans
             >;
