@@ -12,6 +12,16 @@
 #define LS_MT_SK &sk LSHIFT
 
 / {
+    macros {
+        demo: demo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                =
+                <&macro_tap &kp COLON &kp J &kp P &kp MINUS &kp D &kp A &kp T &kp A &kp P &kp I &kp COLON>
+                ;
+        };
+    };
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -96,13 +106,13 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Shift   │  Ctrl    │  Alt     │  Gui     │  BSPC    │   │  Left    │  Down    │  Up      │  Right   │  Ent     │
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  Tab     │  Vol-    │  Mute    │  Vol+    │          │
+        //│          │          │          │          │  Demo    │   │  Tab     │  Vol-    │  Mute    │  Vol+    │          │
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │  *****   │          │   │          │  *****   │ 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             &kp ESC    &trans      &trans     &trans     &kp DEL        &kp C_STOP &kp C_PREV &kp C_PLAY &kp C_NEXT &trans 
             LS_MT_SK   LC_MT_SK    LA_MT_SK   LG_MT_SK   &kp BSPC       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp ENTER  
-            &trans     &trans      &trans     &trans     &trans         &kp TAB    &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans 
+            &trans     &trans      &trans     &trans     &demo          &kp TAB    &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans 
                                               &trans     &trans         &trans     &trans
             >;
         };
