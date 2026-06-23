@@ -18,4 +18,4 @@ _Includes arrow keys, media controls, and essential system shortcuts for multita
 
 ## Keymap Visualization
 
-![keymaps img](./assets/keymap.png "Keymaps")
+![keymaps img](./assets/keymap.svg "Keymaps")

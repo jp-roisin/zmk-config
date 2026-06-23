@@ -1,0 +1,142 @@
+layout: {zmk_keyboard: cradio}
+layers:
+  default:
+  - ''''
+  - ','
+  - .
+  - P
+  - Y
+  - F
+  - G
+  - C
+  - R
+  - L
+  - A
+  - O
+  - E
+  - U
+  - I
+  - D
+  - H
+  - T
+  - N
+  - S
+  - /
+  - Q
+  - J
+  - K
+  - X
+  - B
+  - M
+  - W
+  - V
+  - Z
+  - {t: BSPC, h: symbols}
+  - LSHIFT
+  - SPACE
+  - {t: ENTER, h: numbers}
+  symbols:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - '='
+  - '`'
+  - ':'
+  - ;
+  - KP PLUS
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - '&'
+  - '~'
+  - (
+  - '{'
+  - '['
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - \
+  - '|'
+  - ^
+  - '*'
+  - )
+  - '}'
+  - ']'
+  - _
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  numbers:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '='
+  - '7'
+  - '8'
+  - '9'
+  - KP PLUS
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: ▽, type: trans}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - KP DIVIDE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  tri:
+  - ESC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DEL
+  - STOP
+  - PREV
+  - PLAY
+  - NEXT
+  - {t: ▽, type: trans}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - BSPC
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ENTER
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - TAB
+  - VOL DN
+  - MUTE
+  - VOL UP
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}

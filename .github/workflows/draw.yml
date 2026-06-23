@@ -1,0 +1,36 @@
+name: Draw ZMK keymap
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/*.keymap"
+      - ".github/workflows/draw.yml"
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install keymap-drawer
+        run: pip install keymap-drawer
+
+      - name: Draw keymap
+        run: |
+          keymap parse -z config/cradio.keymap >assets/keymap.yaml
+          keymap draw assets/keymap.yaml >assets/keymap.svg
+
+      - name: Commit updated keymap image
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[Draw] Update keymap image"
+          file_pattern: "assets/keymap.*"
